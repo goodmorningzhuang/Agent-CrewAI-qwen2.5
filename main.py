@@ -265,22 +265,22 @@ def select_mode():
     """启动时选择模式"""
     has_remote = load_remote_config()
     
-    print(f"\n{BOLD}{BLUE}╔════════════════════════════════════════════════════════════════╗{RESET}")
-    print(f"{BLUE}║{RESET}  {BOLD}{CYAN}🚀 智障机器人 3.0 — 选择运行模式{RESET}                            {BLUE}║{RESET}")
-    print(f"{BLUE}╠════════════════════════════════════════════════════════════════╣{RESET}")
-    print(f"{BLUE}║{RESET}                                                              {BLUE}║{RESET}")
-    print(f"{BLUE}║{RESET}    {BOLD}1{RESET} {WHITE}— 本地模型 (Ollama: {LOCAL_MODEL_NAME}){RESET}                    {BLUE}║{RESET}")
+    print(f"\n{BOLD}{BLUE}╔═════════════════════════════════════════════════════════════════════════════════{RESET}")
+    print(f"{BLUE}║{RESET}  {BOLD}{CYAN}🚀 智障机器人 3.0 — 选择运行模式{RESET}                            {BLUE}{RESET}")
+    print(f"{BLUE}╠═════════════════════════════════════════════════════════════════════════════════{RESET}")
+    print(f"{BLUE}║{RESET}                                                              {BLUE}{RESET}")
+    print(f"{BLUE}║{RESET}    {BOLD}1{RESET} {WHITE}— 本地模型 (Ollama: {LOCAL_MODEL_NAME}){RESET}                    {BLUE}{RESET}")
     if has_remote:
         # 隐藏 API Key 中间部分显示
         masked_key = OPENAI_API_KEY[:10] + "..." + OPENAI_API_KEY[-4:] if OPENAI_API_KEY and len(OPENAI_API_KEY) > 14 else OPENAI_API_KEY
-        print(f"{BLUE}║{RESET}    {BOLD}2{RESET} {WHITE}— 外部大模型 ({REMOTE_MODEL_NAME}){RESET}                {BLUE}║{RESET}")
-        print(f"{BLUE}║{RESET}       {YELLOW}📡 API: {OPENAI_API_BASE}{RESET}  {BLUE}║{RESET}")
+        print(f"{BLUE}║{RESET}    {BOLD}2{RESET} {WHITE}— 外部大模型 ({REMOTE_MODEL_NAME}){RESET}                {BLUE}{RESET}")
+        print(f"{BLUE}║{RESET}       {YELLOW}📡 API: {OPENAI_API_BASE}{RESET}  {BLUE}{RESET}")
     else:
-        print(f"{BLUE}║{RESET}    {BOLD}2{RESET} {YELLOW}— 外部大模型 {RESET}{YELLOW}(⚠ .env 配置未找到或不完整){RESET}              {BLUE}║{RESET}")
-    print(f"{BLUE}║{RESET}                                                              {BLUE}║{RESET}")
-    print(f"{BLUE}║{RESET}    {BOLD}3{RESET} {WHITE}— 退出程序{RESET}                                           {BLUE}║{RESET}")
-    print(f"{BLUE}║{RESET}                                                              {BLUE}║{RESET}")
-    print(f"{BLUE}╚════════════════════════════════════════════════════════════════╝{RESET}")
+        print(f"{BLUE}║{RESET}    {BOLD}2{RESET} {YELLOW}— 外部大模型 {RESET}{YELLOW}(⚠ .env 配置未找到或不完整){RESET}              {BLUE}{RESET}")
+    print(f"{BLUE}║{RESET}                                                              {BLUE}{RESET}")
+    print(f"{BLUE}║{RESET}    {BOLD}3{RESET} {WHITE}— 退出程序{RESET}                                           {BLUE}{RESET}")
+    print(f"{BLUE}║{RESET}                                                              {BLUE}{RESET}")
+    print(f"{BLUE}╚═════════════════════════════════════════════════════════════════════════════════{RESET}")
     
     while True:
         choice = input(f"\n{BOLD}{BLUE}➜ 请选择模式 (1/2/3): {RESET}").strip()
