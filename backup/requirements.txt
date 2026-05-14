@@ -1,5 +1,0 @@
-crewai
-langchain_community
-python-pptx
-opencv-python
-requests
